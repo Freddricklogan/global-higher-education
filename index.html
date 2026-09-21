@@ -3,219 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Higher Education & Internationalization — An Executive Resource</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Global Higher Education &amp; Internationalization</title>
 <meta name="description" content="An executive, graduate-level interactive resource on global higher education and internationalization: rationales, student mobility, international student services, global systems and quality, and equity. Authored by Freddrick Logan.">
 <meta name="author" content="Freddrick Logan">
 <meta name="theme-color" content="#14213d">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Global Higher Education & Internationalization — An Executive Resource">
+<meta property="og:title" content="Global Higher Education &amp; Internationalization — An Executive Resource">
 <meta property="og:description" content="How higher education operates, competes, and collaborates across borders — an interactive graduate-level resource on internationalization strategy, mobility, and quality.">
 <meta property="og:url" content="https://freddricklogan.github.io/global-higher-education/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314213d'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%2394773d' stroke-width='2.2'/%3E%3Cellipse cx='16' cy='16' rx='4.2' ry='9' fill='none' stroke='%2394773d' stroke-width='1.7'/%3E%3Cline x1='7' y1='16' x2='25' y2='16' stroke='%2394773d' stroke-width='1.7'/%3E%3Cline x1='16' y1='7' x2='16' y2='25' stroke='%2394773d' stroke-width='1.7'/%3E%3C/svg%3E">
-<style>
-  /* ==== EXECUTIVE DESIGN SYSTEM — light, editorial, WCAG-aware ==== */
-  :root{
-    --paper:#ffffff;--paper2:#f5f7f9;--paper3:#eef1f5;
-    --navy:#14213d;--navy2:#1c2f4f;
-    --panel:#ffffff;--panel2:#ffffff;--panel3:#f5f7f9;
-    --line:#e3e7ec;--line2:#d1d8e2;
-    --accent:#1e3a5f;--accent2:#2a5486;--accent3:#243f6a;
-    --ink:#14213d;--body:#33404f;--muted:#4c596b;--dim:#5f6c7e;
-    --gold:#94773d;--gold-soft:#f3eddf;
-    --good:#15803d;--warn:#b45309;--bad:#b3261e;
-    --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
-    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;
-    --r:12px;--maxw:1060px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--body);line-height:1.7;background:var(--paper);
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{color:var(--accent2);text-decoration:underline}
-  a:focus-visible,button:focus-visible,.tab:focus-visible,.opt:focus-visible,.ck:focus-visible,input:focus-visible{
-    outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:700;letter-spacing:-.01em}
-  h2{font-size:1.75rem;line-height:1.2;margin-bottom:8px}
-  h3{font-size:1.18rem;color:var(--navy);margin-bottom:8px}
-  p{color:var(--body)}
-  .lead{color:var(--muted)}
-  em{color:inherit}
-  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--gold)}
 
-  /* NAV */
-  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);
-    background:rgba(255,255,255,.92);border-bottom:1px solid var(--line)}
-  nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
-  .logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--ink);white-space:nowrap}
-  .logo svg{width:30px;height:30px}
-  .navlinks{display:flex;gap:22px;font-size:.85rem;overflow-x:auto}
-  .navlinks a{color:var(--muted);font-weight:600;white-space:nowrap}
-  .navlinks a:hover{color:var(--accent);text-decoration:none}
-  @media(max-width:860px){.navlinks{display:none}}
-
-  /* HERO */
-  header.hero{padding:80px 0 56px;position:relative}
-  .hero .eyebrow{margin-bottom:18px}
-  .hero h1{font-family:var(--serif);font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.1;letter-spacing:-.02em;
-    font-weight:700;color:var(--ink);margin-bottom:22px}
-  .hero p{font-size:1.14rem;color:var(--muted);max-width:660px}
-  .hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{padding:12px 22px;border-radius:8px;font-weight:600;font-size:.92rem;cursor:pointer;
-    border:1px solid var(--line2);background:#fff;color:var(--ink);transition:.15s;font-family:var(--sans)}
-  .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
-  .btn.primary:hover{background:var(--navy2)}
-  .btn:hover{border-color:var(--accent);color:var(--accent)}
-  .btn.primary:hover{color:#fff}
-  .statrow{display:flex;gap:40px;margin-top:48px;flex-wrap:wrap}
-  .statrow .s .n{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--navy)}
-  .statrow .s .l{font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;margin-top:2px}
-
-  /* EXECUTIVE SUMMARY / TL;DR */
-  .exec-summary{background:var(--paper2);border:1px solid var(--line2);border-left:4px solid var(--navy);
-    border-radius:12px;padding:26px 28px;margin:6px 0 0}
-  .exec-summary .tldr{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;
-    font-weight:700;color:var(--gold);margin-bottom:8px}
-  .exec-summary h2{font-size:1.2rem;margin-bottom:12px}
-  .exec-summary ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-  .exec-summary li{padding-left:22px;position:relative;color:var(--muted);font-size:.96rem}
-  .exec-summary li::before{content:'';position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;
-    background:var(--gold)}
-  .exec-summary li b{color:var(--ink);font-weight:700}
-
-  section{padding:60px 0;border-top:1px solid var(--line)}
-  .sec-head{margin-bottom:34px;max-width:720px}
-  .sec-head .eyebrow{display:block;margin-bottom:12px}
-
-  .grid{display:grid;gap:20px}
-  .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-  @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;
-    box-shadow:0 1px 2px rgba(20,33,61,.04)}
-  .card.hoverable{transition:.18s}.card.hoverable:hover{border-color:var(--line2);transform:translateY(-2px);
-    box-shadow:0 14px 34px -20px rgba(20,33,61,.35)}
-  .card .tag{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:700;text-transform:uppercase;
-    letter-spacing:.09em;color:var(--gold);background:var(--gold-soft);padding:3px 10px;border-radius:4px;margin-bottom:12px}
-  .card ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:.92rem}
-  .card ul li{margin-bottom:6px}
-  .kv{font-size:.92rem;color:var(--muted);margin-top:4px}.kv b{color:var(--ink);font-weight:700}
-
-  /* TABS */
-  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-  .tab{padding:10px 16px;border-radius:8px;border:1px solid var(--line2);background:#fff;color:var(--muted);
-    font-weight:600;font-size:.88rem;cursor:pointer;transition:.15s;font-family:var(--sans)}
-  .tab:hover{color:var(--accent);border-color:var(--accent)}
-  .tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
-  .panel{display:none;animation:fade .3s ease}
-  .panel.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .panel-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
-  @media(max-width:860px){.panel-grid{grid-template-columns:1fr}}
-  .facts{list-style:none;padding:0}
-  .facts li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
-  .facts li span:first-child{color:var(--dim);min-width:130px;font-weight:600}
-  .facts li span:last-child{color:var(--ink)}
-
-  /* SELECTOR widget */
-  .selector{background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:28px}
-  .q{margin-bottom:20px}
-  .q p{font-weight:600;color:var(--ink);margin-bottom:10px}
-  .opts{display:flex;gap:8px;flex-wrap:wrap}
-  .opt{padding:9px 14px;border-radius:8px;border:1px solid var(--line2);background:#fff;
-    color:var(--muted);cursor:pointer;font-size:.88rem;transition:.15s;font-family:var(--sans)}
-  .opt:hover{border-color:var(--accent);color:var(--accent)}
-  .opt.sel{background:var(--navy);border-color:var(--navy);color:#fff}
-  .result{margin-top:20px;padding:20px;border-radius:10px;background:#fff;border:1px solid var(--line2);border-left:4px solid var(--gold);display:none}
-  .result.show{display:block;animation:fade .3s}
-  .result .big{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:4px}
-
-  /* STEPPER */
-  .steps{counter-reset:s;display:grid;gap:14px}
-  .step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);
-    border-radius:12px;padding:18px 20px;box-shadow:0 1px 2px rgba(20,33,61,.04)}
-  .step .num{counter-increment:s;flex:0 0 40px;height:40px;width:40px;border-radius:9px;display:grid;place-items:center;
-    background:var(--navy);color:#fff;font-family:var(--serif);font-weight:700}
-  .step .num::before{content:counter(s,decimal-leading-zero)}
-  .step h4{font-size:1.02rem;margin-bottom:3px}
-  .step p{font-size:.92rem;color:var(--muted)}
-
-  /* TABLE */
-  table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:8px}
-  th{text-align:left;font-family:var(--sans);color:var(--navy);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
-    padding:12px 13px;border-bottom:2px solid var(--line2)}
-  td{padding:12px 13px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
-  td b{color:var(--ink);font-weight:700}
-  tbody tr:hover{background:var(--paper2)}
-  .tbl-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);background:#fff}
-
-  /* LADDER / coder */
-  .coder{background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:26px}
-  .ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px 0 8px;position:relative}
-  @media(max-width:860px){.ladder{grid-template-columns:1fr;gap:10px}}
-  .rung{text-align:center;padding:15px 11px;border:1px solid var(--line);background:#fff;position:relative}
-  .rung:first-child{border-radius:10px 0 0 10px}.rung:last-child{border-radius:0 10px 10px 0}
-  @media(max-width:860px){.rung{border-radius:10px!important}}
-  .rung.on{background:var(--paper3);border-color:var(--navy)}
-  .rung .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-bottom:6px;font-weight:600}
-  .rung .val{font-size:.9rem;color:var(--ink);font-weight:600;min-height:2.6em}
-  .quote{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--ink);border-left:3px solid var(--gold);
-    padding:6px 18px;margin-bottom:10px;background:transparent}
-
-  /* CHECKLIST scorer */
-  .checklist{display:grid;gap:10px}
-  .ck{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border:1px solid var(--line);border-radius:10px;
-    cursor:pointer;transition:.15s;background:#fff}
-  .ck:hover{border-color:var(--accent)}
-  .ck.on{background:#f0f6f2;border-color:var(--good)}
-  .ck .box{flex:0 0 20px;height:20px;width:20px;border-radius:5px;border:2px solid var(--dim);display:grid;place-items:center;margin-top:2px;background:#fff}
-  .ck.on .box{background:var(--good);border-color:var(--good)}
-  .ck.on .box::after{content:'✓';color:#fff;font-weight:900;font-size:.75rem}
-  .ck .t b{display:block;color:var(--ink);font-size:.94rem;font-weight:700}
-  .ck .t span{font-size:.86rem;color:var(--muted)}
-  .score{margin-top:22px;padding:22px;border-radius:12px;text-align:center;background:var(--paper2);border:1px solid var(--line2)}
-  .score .meter{height:12px;border-radius:8px;background:var(--paper3);overflow:hidden;margin:14px 0}
-  .score .fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--navy),var(--good));transition:width .4s}
-  .score .verdict{font-family:var(--serif);font-weight:700;font-size:1.15rem}
-
-  .callout{border-left:3px solid var(--gold);background:var(--paper2);border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;font-size:.96rem;color:var(--muted)}
-  .callout b{color:var(--ink)}
-
-  .scholars{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .chip{font-size:.82rem;padding:6px 12px;border-radius:6px;border:1px solid var(--line2);color:var(--muted);background:#fff}
-
-  footer{border-top:1px solid var(--line);padding:44px 0 56px;margin-top:20px;color:var(--dim);font-size:.9rem;background:var(--paper2)}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:flex-start}
-  footer a{color:var(--accent)}
-  .copyright{width:100%;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:.82rem}
-  .backhub{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted);margin-bottom:10px}
-  /* ==== Executive memorandum + collapsible sections ==== */
-  .memo-head{font-family:var(--serif);font-weight:700;font-size:1rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:12px}
-  .memo-meta{display:grid;gap:5px;margin-bottom:16px}
-  .memo-meta>div{display:flex;gap:10px;font-size:.92rem;color:var(--muted)}
-  .memo-meta span{flex:0 0 auto;min-width:48px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;color:var(--gold);padding-top:3px}
-  .expand-bar{max-width:var(--maxw);margin:0 auto;padding:22px 24px 0;display:flex;justify-content:flex-end}
-  .expand-bar button{font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--accent);background:#fff;border:1px solid var(--line2);border-radius:7px;padding:8px 14px;cursor:pointer}
-  .expand-bar button:hover{border-color:var(--accent)}
-  .expand-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .sec-head.sect-toggle{cursor:pointer;position:relative;padding-right:40px}
-  .sec-head.sect-toggle::after{content:'';position:absolute;right:8px;top:10px;width:12px;height:12px;border-right:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(45deg);transition:transform .2s}
-  section.collapsed .sec-head.sect-toggle::after{transform:rotate(-45deg)}
-  .sec-head.sect-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
-  section.collapsed .sect-body{display:none}
-  .sect-body{animation:fade .3s ease}
-  /* Centered footer */
-  footer .wrap{flex-direction:column;align-items:center;text-align:center;gap:6px;justify-content:center}
-  .foot-name{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:1.08rem}
-  .foot-title{color:var(--muted);font-size:.92rem;max-width:640px}
-  .foot-links{margin-top:6px;font-size:.9rem}
-  .foot-links a{color:var(--accent);white-space:nowrap}
-  footer .copyright{width:100%;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);color:var(--dim);font-size:.82rem;text-align:center}
-</style>
+<link rel="canonical" href="https://freddricklogan.github.io/global-higher-education/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="src/exec-shell.css">
+<link rel="stylesheet" href="src/lr-kit.css">
+<link rel="stylesheet" href="src/page.css">
 </head>
 <body>
 
-<nav class="top"><div class="wrap">
+<nav class="top" aria-label="Sections"><div class="wrap">
   <div class="logo">
     <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#14213d"/><circle cx="16" cy="16" r="9" fill="none" stroke="#94773d" stroke-width="2.2"/><ellipse cx="16" cy="16" rx="4.2" ry="9" fill="none" stroke="#94773d" stroke-width="1.7"/><line x1="7" y1="16" x2="25" y2="16" stroke="#94773d" stroke-width="1.7"/><line x1="16" y1="7" x2="16" y2="25" stroke="#94773d" stroke-width="1.7"/></svg>
     Global Higher Education
@@ -238,8 +47,9 @@
   </div>
 </div></nav>
 
+<main>
 <header class="hero"><div class="wrap">
-  <a class="backhub" href="../resources/">← Educational Leadership &amp; Research Resources</a>
+  <a class="backhub" href="https://freddricklogan.github.io/resources/">← Educational Leadership &amp; Research Resources</a>
   <span class="eyebrow">An Executive Resource</span>
   <h1>Global Higher Education &amp; Internationalization</h1>
   <p class="lead">How higher education operates, competes, and collaborates across borders — the rationales that drive institutions abroad, the strategy levers leaders pull, the mobility of students and knowledge, and the systems, quality regimes, and ethics that govern it all. Built for graduate students, administrators, and international-education leaders.</p>
@@ -277,24 +87,24 @@
   <div class="grid g2">
     <div class="card"><span class="tag">Knight's definition</span><h3>A process, not a product</h3>
       <p>Internationalization is <b>"the process of integrating an international, intercultural, or global dimension into the purpose, functions, or delivery of post-secondary education"</b> — that is, into teaching, research, and service. It is a means to institutional goals, not an end in itself.</p>
-      <p class="kv" style="margin-top:12px"><b>Key nuance:</b> Knight distinguishes internationalization from globalization — globalization is the flow of ideas, people, and capital across borders (a context); internationalization is how a nation or institution deliberately responds to it.</p></div>
+      <p class="kv lr-s1"><b>Key nuance:</b> Knight distinguishes internationalization from globalization — globalization is the flow of ideas, people, and capital across borders (a context); internationalization is how a nation or institution deliberately responds to it.</p></div>
     <div class="card"><span class="tag">At home vs. abroad</span><h3>Two complementary streams</h3>
-      <div class="tbl-wrap"><table>
-        <tr><th>Dimension</th><th>At home</th><th>Abroad / cross-border</th></tr>
+      <div class="tbl-wrap"><table><tbody>
+        <tr><th scope="row">Dimension</th><th scope="row">At home</th><th scope="row">Abroad / cross-border</th></tr>
         <tr><td><b>Locus</b></td><td>On the home campus</td><td>Across national borders</td></tr>
         <tr><td><b>Reaches</b></td><td>All students, incl. non-mobile</td><td>Mobile students, staff, programs</td></tr>
         <tr><td><b>Levers</b></td><td>Curriculum, COIL, campus diversity</td><td>Mobility, branch campuses, partnerships</td></tr>
         <tr><td><b>Equity note</b></td><td>Democratizes global learning</td><td>Depends on resources &amp; access</td></tr>
-      </table></div></div>
+      </tbody></table></div></div>
   </div>
   <div class="callout"><b>Comprehensive internationalization</b> (John Hudzik / ACE) is the commitment to infuse international and comparative perspectives throughout the <b>entire</b> institution — mission, leadership, curriculum, faculty, and partnerships — rather than treating it as a set of isolated activities. "Internationalization at home" (Beelen &amp; Jones) ensures the 90%+ of students who never travel still gain intercultural and global competence.</div>
 </div></section>
 
-<!-- RATIONALES & RISKS -->
+<!-- RATIONALES &amp; RISKS -->
 <section id="rationales"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Drivers &amp; dangers</span><h2>Rationales for going global — and the risks</h2>
     <p class="lead">Knight and de Wit group the motivations for internationalization into four families. Naming your dominant rationale clarifies strategy — and exposes the trade-offs each one carries.</p></div>
-  <div class="grid g4" style="margin-bottom:22px">
+  <div class="grid g4 lr-s2">
     <div class="card hoverable"><span class="tag">Academic</span><h3>Quality &amp; reputation</h3>
       <p class="kv">Enhancing academic standards, research capacity, curriculum, and institutional profile through global engagement and benchmarking.</p></div>
     <div class="card hoverable"><span class="tag">Economic</span><h3>Revenue &amp; competitiveness</h3>
@@ -304,16 +114,16 @@
     <div class="card hoverable"><span class="tag">Social / cultural</span><h3>Understanding &amp; citizenship</h3>
       <p class="kv">Intercultural understanding, global citizenship, national cultural identity, and preparing graduates for a connected world.</p></div>
   </div>
-  <h3 style="margin-bottom:12px">The risks internationalization must manage</h3>
-  <div class="tbl-wrap"><table>
-    <tr><th>Risk</th><th>What it looks like</th><th>Who bears it</th></tr>
+  <h3 class="lr-s3">The risks internationalization must manage</h3>
+  <div class="tbl-wrap"><table><tbody>
+    <tr><th scope="row">Risk</th><th scope="row">What it looks like</th><th scope="row">Who bears it</th></tr>
     <tr><td><b>Commercialization</b></td><td>Revenue motives crowd out academic purpose; "internationalization for profit"</td><td>Institutional mission, students</td></tr>
     <tr><td><b>Brain drain</b></td><td>Talented students and scholars do not return to sending countries</td><td>Sending nations, home economies</td></tr>
     <tr><td><b>Inequity of access</b></td><td>Mobility and global learning concentrate among the already-advantaged</td><td>Under-resourced students &amp; institutions</td></tr>
     <tr><td><b>Quality &amp; integrity</b></td><td>Diploma mills, weak oversight of branch campuses, credential fraud</td><td>Students, employers, systems</td></tr>
     <tr><td><b>Homogenization</b></td><td>Dominance of English &amp; Western models erodes local knowledge traditions</td><td>Local cultures &amp; languages</td></tr>
     <tr><td><b>Dependency</b></td><td>Over-reliance on a few source countries leaves budgets exposed to shocks</td><td>Institutional finances</td></tr>
-  </table></div>
+  </tbody></table></div>
   <div class="callout">Hans de Wit and colleagues warn against <b>"internationalization of higher education"</b> becoming a checklist of activities detached from purpose. The corrective is a values-driven, inclusive vision — de Wit's updated definition adds that it should be <em>"intentional"</em> and aimed at enhancing quality and making a <em>"meaningful contribution to society."</em></div>
 </div></section>
 
@@ -322,18 +132,18 @@
   <div class="sec-head"><span class="eyebrow">Interactive · Signature widget</span><h2>Internationalization strategy explorer</h2>
     <p class="lead">Comprehensive internationalization is assembled from distinct <b>levers</b>. Select a lever to see its definition, the benefits it delivers, and the challenges leaders must manage. No single lever is a strategy on its own.</p></div>
   <div class="tabs" id="levertabs">
-    <button class="tab active" data-p="mobility">Student mobility</button>
-    <button class="tab" data-p="branch">Branch campuses</button>
-    <button class="tab" data-p="partner">Partnerships &amp; joint degrees</button>
-    <button class="tab" data-p="curric">Internationalized curriculum</button>
-    <button class="tab" data-p="research">Research collaboration</button>
-    <button class="tab" data-p="coil">Virtual exchange / COIL</button>
+    <button type="button" class="tab active" data-p="panel-mobility">Student mobility</button>
+    <button type="button" class="tab" data-p="branch">Branch campuses</button>
+    <button type="button" class="tab" data-p="partner">Partnerships &amp; joint degrees</button>
+    <button type="button" class="tab" data-p="curric">Internationalized curriculum</button>
+    <button type="button" class="tab" data-p="research">Research collaboration</button>
+    <button type="button" class="tab" data-p="coil">Virtual exchange / COIL</button>
   </div>
 
-  <div class="panel active" id="mobility"><div class="panel-grid">
+  <div class="panel active" id="panel-mobility"><div class="panel-grid">
     <div class="card"><h3>Student &amp; scholar mobility</h3>
       <p>The physical movement of students, faculty, and staff across borders for study, teaching, or research — the most visible and traditional lever, spanning short-term study abroad, credit mobility, and full degree mobility.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> inbound (hosting international students) and outbound (sending home students abroad) flows, credit vs. degree mobility.</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> inbound (hosting international students) and outbound (sending home students abroad) flows, credit vs. degree mobility.</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Intercultural competence, language gains, employability, campus diversity, tuition revenue</span></li>
       <li><span>Challenges</span><span>Cost &amp; equity of access, health/safety &amp; risk, credit transfer, visa dependence, re-entry support</span></li>
@@ -345,7 +155,7 @@
   <div class="panel" id="branch"><div class="panel-grid">
     <div class="card"><h3>International branch campuses</h3>
       <p>An institution establishes a physical presence in another country, awarding its own credential in the host location — a form of program and provider mobility that moves the institution to the student.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> cross-border delivery where the awarding institution operates a campus abroad (e.g. education hubs in the Gulf, Southeast Asia, China).</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> cross-border delivery where the awarding institution operates a campus abroad (e.g. education hubs in the Gulf, Southeast Asia, China).</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Access for non-mobile students, global brand, new markets, host-country capacity building</span></li>
       <li><span>Challenges</span><span>Quality assurance across jurisdictions, academic freedom, financial risk, cultural &amp; legal fit</span></li>
@@ -357,7 +167,7 @@
   <div class="panel" id="partner"><div class="panel-grid">
     <div class="card"><h3>Partnerships &amp; joint / dual degrees</h3>
       <p>Formal agreements between institutions in different countries — from student exchange and articulation to <b>joint degrees</b> (one shared credential) and <b>dual/double degrees</b> (two credentials) delivered collaboratively.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> collaborative programs, consortia, and Memoranda of Understanding that pool curricula, faculty, and recognition.</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> collaborative programs, consortia, and Memoranda of Understanding that pool curricula, faculty, and recognition.</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Shared expertise, recruitment pipelines, cost-sharing, mutual recognition of credit</span></li>
       <li><span>Challenges</span><span>Credit &amp; degree recognition, quality alignment, sustainability, unequal partner power</span></li>
@@ -369,7 +179,7 @@
   <div class="panel" id="curric"><div class="panel-grid">
     <div class="card"><h3>Internationalized curriculum</h3>
       <p>Embedding international, intercultural, and global perspectives into the content, learning outcomes, and teaching of programs — the heart of "internationalization at home," reaching every student regardless of mobility.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> Internationalization of the Curriculum (Betty Leask) — intentional design so all graduates develop global and intercultural capabilities.</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> Internationalization of the Curriculum (Betty Leask) — intentional design so all graduates develop global and intercultural capabilities.</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Equitable global learning, employability, inclusive of non-mobile &amp; local students</span></li>
       <li><span>Challenges</span><span>Faculty buy-in &amp; development, avoiding tokenism, assessing intercultural outcomes</span></li>
@@ -381,7 +191,7 @@
   <div class="panel" id="research"><div class="panel-grid">
     <div class="card"><h3>International research collaboration</h3>
       <p>Cross-border co-authorship, joint grants, shared infrastructure, and researcher mobility that address problems no single nation can solve alone — increasingly the engine of global knowledge production.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> collaborative research networks, international co-publication, and mobility of scholars and doctoral candidates.</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> collaborative research networks, international co-publication, and mobility of scholars and doctoral candidates.</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Higher impact &amp; citation, access to funding &amp; facilities, capacity building, global challenges</span></li>
       <li><span>Challenges</span><span>Equitable authorship, research security &amp; ethics, IP, "helicopter/parachute" research</span></li>
@@ -393,7 +203,7 @@
   <div class="panel" id="coil"><div class="panel-grid">
     <div class="card"><h3>Virtual exchange / COIL</h3>
       <p>Collaborative Online International Learning connects classes in different countries through technology-enabled, sustained collaboration — delivering intercultural learning without the cost or carbon of travel.</p>
-      <p class="kv" style="margin-top:12px"><b>Definition:</b> COIL (SUNY origin) &amp; virtual exchange — co-taught, project-based online collaboration between geographically separated students.</p></div>
+      <p class="kv lr-s1"><b>Definition:</b> COIL (SUNY origin) &amp; virtual exchange — co-taught, project-based online collaboration between geographically separated students.</p></div>
     <ul class="facts">
       <li><span>Benefits</span><span>Low-cost, inclusive, scalable; reaches students who cannot travel; sustainable</span></li>
       <li><span>Challenges</span><span>Time zones, digital access &amp; equity, faculty design effort, depth vs. in-person immersion</span></li>
@@ -407,7 +217,7 @@
 <section id="mobility"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Student mobility</span><h2>The flows of students across borders</h2>
     <p class="lead">Mobility is measured in two directions and two durations. Leaders design programs that maximize learning while managing cost, safety, and access.</p></div>
-  <div class="grid g2" style="margin-bottom:20px">
+  <div class="grid g2 lr-s4">
     <div class="card"><h3>Directions &amp; durations</h3>
       <ul>
         <li><b>Inbound</b> — international students hosted on the home campus</li>
@@ -425,7 +235,7 @@
       </ul></div>
   </div>
   <div class="card"><h3>Leading a study-abroad program — the administrator's responsibilities</h3>
-    <div class="grid g2" style="margin-top:6px">
+    <div class="grid g2 lr-s5">
       <ul>
         <li><b>Program planning</b> — learning outcomes, academic integration, credit approval, provider vetting</li>
         <li><b>Health, safety &amp; security</b> — risk assessment, insurance, emergency &amp; evacuation protocols, 24/7 contact</li>
@@ -437,7 +247,7 @@
         <li><b>Compliance</b> — Title IX abroad, Clery Act awareness, accessibility, and student conduct</li>
       </ul>
     </div>
-    <div class="callout" style="margin-top:14px"><b>Equity in education abroad</b> is a persistent challenge: participants have historically skewed toward higher-income, majority-race, non-STEM, able-bodied students. Inclusive program design — funding, short-term and credit-bearing options, and targeted advising — is now a core leadership priority (see NAFSA and the Institute of International Education's efforts).</div>
+    <div class="callout lr-s6"><b>Equity in education abroad</b> is a persistent challenge: participants have historically skewed toward higher-income, majority-race, non-STEM, able-bodied students. Inclusive program design — funding, short-term and credit-bearing options, and targeted advising — is now a core leadership priority (see NAFSA and the Institute of International Education's efforts).</div>
   </div>
 </div></section>
 
@@ -453,14 +263,14 @@
     <div class="step"><div class="num"></div><div><h4>Ongoing support &amp; belonging</h4><p>Advising, counseling, mentoring, English support, and community — addressing culture shock, isolation, and academic-system differences.</p></div></div>
     <div class="step"><div class="num"></div><div><h4>Work authorization &amp; transition</h4><p>Advising on on-campus work, CPT and OPT (practical training), and post-study pathways — a decisive factor in destination choice.</p></div></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>SEVIS</b> (the Student and Exchange Visitor Information System) is the U.S. federal database that tracks F and J visa holders. The <b>DSO</b> and <b>Responsible Officer</b> report enrollment, address, and status changes — making immigration advising a regulated, high-stakes function, not a clerical one. NAFSA: Association of International Educators is the leading professional home for this work.</div>
+  <div class="callout lr-s7"><b>SEVIS</b> (the Student and Exchange Visitor Information System) is the U.S. federal database that tracks F and J visa holders. The <b>DSO</b> and <b>Responsible Officer</b> report enrollment, address, and status changes — making immigration advising a regulated, high-stakes function, not a clerical one. NAFSA: Association of International Educators is the leading professional home for this work.</div>
 </div></section>
 
-<!-- GLOBAL SYSTEMS & QUALITY -->
+<!-- GLOBAL SYSTEMS &amp; QUALITY -->
 <section id="systems"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Comparative systems &amp; quality</span><h2>How global higher education is structured and assured</h2>
     <p class="lead">Working across borders requires reading other systems — their degree structures, quality regimes, and the rankings that increasingly shape institutional behavior.</p></div>
-  <div class="grid g2" style="margin-bottom:20px">
+  <div class="grid g2 lr-s4">
     <div class="card"><span class="tag">Bologna Process / EHEA</span><h3>Convergence in Europe</h3>
       <p>Launched by the 1999 Bologna Declaration, the Bologna Process built the <b>European Higher Education Area</b> — harmonizing degree structures into a three-cycle system (bachelor's / master's / doctorate), the <b>ECTS</b> credit system, quality assurance standards, and the Diploma Supplement to make degrees comparable and portable across 40+ countries.</p></div>
     <div class="card"><span class="tag">Degree structures</span><h3>Systems differ in shape</h3>
@@ -474,10 +284,10 @@
   <div class="grid g2">
     <div class="card"><span class="tag">Global rankings</span><h3>Powerful — and contested</h3>
       <p class="kv">The major rankings — <b>QS</b>, <b>Times Higher Education (THE)</b>, and the <b>Academic Ranking of World Universities (ARWU / Shanghai)</b> — shape reputation, recruitment, and policy.</p>
-      <p class="kv" style="margin-top:10px"><b>Critiques:</b> over-weight research over teaching; favor large, wealthy, English-language, science-heavy institutions; rely on reputation surveys and gameable metrics; narrow the definition of "quality"; and can distort institutional priorities.</p></div>
+      <p class="kv lr-s8"><b>Critiques:</b> over-weight research over teaching; favor large, wealthy, English-language, science-heavy institutions; rely on reputation surveys and gameable metrics; narrow the definition of "quality"; and can distort institutional priorities.</p></div>
     <div class="card"><span class="tag">Quality assurance</span><h3>Trust across borders</h3>
       <p class="kv"><b>Accreditation</b> and <b>quality assurance</b> vary by country — from U.S. regional/programmatic accreditors to national QA agencies abroad. Cross-border collaboration relies on mutual recognition.</p>
-      <p class="kv" style="margin-top:10px"><b>Key instruments:</b> the <b>INQAAHE</b> network, the European <b>ESG</b> standards and <b>ENQA</b>, and UNESCO's <b>Global Convention</b> on the recognition of qualifications — all working to combat diploma mills and enable credential portability.</p></div>
+      <p class="kv lr-s8"><b>Key instruments:</b> the <b>INQAAHE</b> network, the European <b>ESG</b> standards and <b>ENQA</b>, and UNESCO's <b>Global Convention</b> on the recognition of qualifications — all working to combat diploma mills and enable credential portability.</p></div>
   </div>
 </div></section>
 
@@ -485,12 +295,12 @@
 <section id="comparative"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Comparative systems</span><h2>Comparative higher education systems</h2>
     <p class="lead">Working across borders means reading systems that are structured on different logics. This side-by-side compares three broad models — the United States, the European Higher Education Area shaped by Bologna, and large Asian systems (using China and India as general reference points). Descriptions are structural generalizations, not precise statistics.</p></div>
-  <div class="tbl-wrap"><table>
+  <div class="tbl-wrap"><table><tbody>
     <tr>
-      <th>Dimension</th>
-      <th>United States</th>
-      <th>European (Bologna / EHEA)</th>
-      <th>Asia (China / India, general)</th>
+      <th scope="row">Dimension</th>
+      <th scope="row">United States</th>
+      <th scope="row">European (Bologna / EHEA)</th>
+      <th scope="row">Asia (China / India, general)</th>
     </tr>
     <tr>
       <td><b>Degree structure</b></td>
@@ -528,7 +338,7 @@
       <td>Cross-border comparability and mobility by design — ECTS, the Diploma Supplement, mutual recognition</td>
       <td>Massive scale and rapid expansion; explicit national ambition to build globally competitive research universities</td>
     </tr>
-  </table></div>
+  </tbody></table></div>
   <div class="callout"><b>Why this matters for leaders:</b> credit systems, degree lengths, and admission logics are <em>not</em> interchangeable. A partnership or credential-evaluation decision that treats a 3-year Bologna bachelor's, a 4-year U.S. bachelor's, and an exam-gated Asian degree as equivalent will misfire. Comparative literacy (Altbach) is a prerequisite for equitable, workable cross-border collaboration.</div>
 </div></section>
 
@@ -536,7 +346,7 @@
 <section id="bologna"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Deep dive</span><h2>The Bologna Process, in depth</h2>
     <p class="lead">Begun with the 1999 Bologna Declaration, the Bologna Process is a voluntary intergovernmental reform that built the European Higher Education Area (EHEA), now spanning more than 40 countries. Its aim is comparable, compatible, and coherent degrees that let students and graduates move freely.</p></div>
-  <div class="grid g2" style="margin-bottom:20px">
+  <div class="grid g2 lr-s4">
     <div class="card"><span class="tag">Three-cycle system</span><h3>Bachelor · Master · Doctorate</h3>
       <p>Bologna restructured degrees into three sequential cycles. The <b>first cycle</b> (bachelor's) gives access to the <b>second cycle</b> (master's), which in turn gives access to the <b>third cycle</b> (doctorate). A shared reference framework of qualifications describes each cycle by learning outcomes, so a "master's" means broadly the same level of competence across the EHEA.</p></div>
     <div class="card"><span class="tag">ECTS credits</span><h3>Currency of learning</h3>
@@ -548,7 +358,7 @@
   </div>
   <div class="card"><span class="tag">Quality assurance</span><h3>The ESG, ENQA, and mutual trust</h3>
     <p>Comparability only works if quality is trusted across borders. Bologna therefore built a shared quality-assurance architecture: the <b>Standards and Guidelines for Quality Assurance in the EHEA (ESG)</b> define common expectations for internal QA, external review, and QA agencies themselves. The <b>European Association for Quality Assurance in Higher Education (ENQA)</b> is the membership body for QA agencies that meet those standards, and the <b>European Quality Assurance Register (EQAR)</b> lists agencies operating in line with the ESG — the concept being that if agencies are trustworthy, the degrees they assure can be trusted across the whole area.</p>
-    <div class="callout" style="margin-top:14px"><b>The through-line:</b> three cycles make degrees <em>comparable</em>, ECTS makes learning <em>transferable</em>, the Diploma Supplement makes credentials <em>legible</em>, recognition conventions make mobility <em>count</em>, and the ESG/ENQA framework makes quality <em>trustworthy</em>. Together they turn 40+ national systems into one mobility space.</div>
+    <div class="callout lr-s6"><b>The through-line:</b> three cycles make degrees <em>comparable</em>, ECTS makes learning <em>transferable</em>, the Diploma Supplement makes credentials <em>legible</em>, recognition conventions make mobility <em>count</em>, and the ESG/ENQA framework makes quality <em>trustworthy</em>. Together they turn 40+ national systems into one mobility space.</div>
   </div>
 </div></section>
 
@@ -557,15 +367,15 @@
   <div class="sec-head"><span class="eyebrow">Interactive · Rankings</span><h2>Global rankings — what the metrics actually reward</h2>
     <p class="lead">Three ranking systems dominate global attention. Each claims to measure "the world's best universities," but each is really a weighted formula — and what a formula weights is what institutions are pushed to chase. Select a system to see, conceptually, what it rewards and where it is critiqued.</p></div>
   <div class="tabs" id="ranktabs">
-    <button class="tab active" data-p="rank-arwu">ARWU / Shanghai</button>
-    <button class="tab" data-p="rank-the">Times Higher Education</button>
-    <button class="tab" data-p="rank-qs">QS</button>
+    <button type="button" class="tab active" data-p="rank-arwu">ARWU / Shanghai</button>
+    <button type="button" class="tab" data-p="rank-the">Times Higher Education</button>
+    <button type="button" class="tab" data-p="rank-qs">QS</button>
   </div>
 
   <div class="panel active" id="rank-arwu"><div class="panel-grid">
     <div class="card"><h3>Academic Ranking of World Universities (ARWU / Shanghai)</h3>
       <p>First published in 2003 by Shanghai Jiao Tong University, ARWU is the most <b>research-and-elite-prize oriented</b> of the major rankings. It leans on objective bibliometric and award-based indicators rather than opinion surveys.</p>
-      <p class="kv" style="margin-top:12px"><b>Conceptually rewards:</b> Nobel Prizes and Fields Medals (among alumni and staff), highly cited researchers, and papers in the most selective science journals.</p></div>
+      <p class="kv lr-s1"><b>Conceptually rewards:</b> Nobel Prizes and Fields Medals (among alumni and staff), highly cited researchers, and papers in the most selective science journals.</p></div>
     <ul class="facts">
       <li><span>Rewards</span><span>Elite research output, prizes, citation superstars</span></li>
       <li><span>Data source</span><span>Bibliometric and award databases (no reputation survey)</span></li>
@@ -577,7 +387,7 @@
   <div class="panel" id="rank-the"><div class="panel-grid">
     <div class="card"><h3>Times Higher Education (THE) World University Rankings</h3>
       <p>THE uses a broad basket of indicators grouped around teaching, research environment, research quality (including citation impact), international outlook, and industry income — blending <b>objective data with large reputation surveys</b>.</p>
-      <p class="kv" style="margin-top:12px"><b>Conceptually rewards:</b> citation impact, research income and productivity, reputation among academics, and international staff, students, and co-authorship.</p></div>
+      <p class="kv lr-s1"><b>Conceptually rewards:</b> citation impact, research income and productivity, reputation among academics, and international staff, students, and co-authorship.</p></div>
     <ul class="facts">
       <li><span>Rewards</span><span>Citations, research environment, reputation, international mix</span></li>
       <li><span>Data source</span><span>Institutional data + a global reputation survey</span></li>
@@ -589,7 +399,7 @@
   <div class="panel" id="rank-qs"><div class="panel-grid">
     <div class="card"><h3>QS World University Rankings</h3>
       <p>QS places <b>heavy weight on reputation surveys</b> — a large academic reputation survey plus an employer reputation survey — alongside faculty–student ratio, citations per faculty, and internationalization measures.</p>
-      <p class="kv" style="margin-top:12px"><b>Conceptually rewards:</b> academic and employer opinion, a favorable staffing ratio, citation counts, and international faculty and student presence.</p></div>
+      <p class="kv lr-s1"><b>Conceptually rewards:</b> academic and employer opinion, a favorable staffing ratio, citation counts, and international faculty and student presence.</p></div>
     <ul class="facts">
       <li><span>Rewards</span><span>Perceived reputation, employability signal, international mix</span></li>
       <li><span>Data source</span><span>Very large academic + employer surveys, plus metrics</span></li>
@@ -598,7 +408,7 @@
     </ul>
   </div></div>
 
-  <div class="grid g3" style="margin-top:22px">
+  <div class="grid g3 lr-s9">
     <div class="card"><h3>Bias toward research &amp; English</h3><ul>
       <li>Formulas privilege research volume and citations over teaching and learning</li>
       <li>English-language publication and indexing advantage Anglophone systems</li>
@@ -615,7 +425,7 @@
       <li>Student experience and actual learning gains</li>
     </ul></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>The leadership takeaway (after Marginson):</b> rankings are a form of global positional competition that can concentrate prestige and resources among already-dominant universities. Read them as one contested signal among many — useful for benchmarking, dangerous as a strategy. Alternative frameworks (e.g. rankings oriented to impact and the Sustainable Development Goals) try to reward a wider definition of value.</div>
+  <div class="callout lr-s7"><b>The leadership takeaway (after Marginson):</b> rankings are a form of global positional competition that can concentrate prestige and resources among already-dominant universities. Read them as one contested signal among many — useful for benchmarking, dangerous as a strategy. Alternative frameworks (e.g. rankings oriented to impact and the Sustainable Development Goals) try to reward a wider definition of value.</div>
 </div></section>
 
 <!-- TRANSNATIONAL EDUCATION + INTERACTIVE SELECTOR -->
@@ -634,7 +444,7 @@
     <div class="result show" id="tneResult"></div>
   </div>
 
-  <div class="grid g4" style="margin-top:22px">
+  <div class="grid g4 lr-s9">
     <div class="card hoverable"><span class="tag">Branch campus</span><h3>Provider moves abroad</h3>
       <p class="kv">The awarding institution runs a physical campus in a host country and grants its own credential there.</p>
       <ul><li><b>Pro:</b> home brand &amp; credential, access for non-mobile students, host capacity building</li><li><b>Con:</b> high capital &amp; financial risk, dual-jurisdiction quality assurance, academic-freedom tensions</li></ul></div>
@@ -648,14 +458,14 @@
       <p class="kv">The credential is delivered wholly or largely online across borders, sometimes with local support centres.</p>
       <ul><li><b>Pro:</b> scalable, low marginal cost, flexible for working &amp; non-mobile learners</li><li><b>Con:</b> digital-access equity, engagement &amp; completion, credential recognition, weaker cultural immersion</li></ul></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>Regulatory reality:</b> TNE typically sits under <em>two</em> regulatory regimes at once — the awarding country's and the host country's — and quality can vary from excellent to exploitative. Frameworks such as the UNESCO/OECD guidelines on quality provision in cross-border higher education exist precisely to protect students from low-quality or fraudulent provision.</div>
+  <div class="callout lr-s7"><b>Regulatory reality:</b> TNE typically sits under <em>two</em> regulatory regimes at once — the awarding country's and the host country's — and quality can vary from excellent to exploitative. Frameworks such as the UNESCO/OECD guidelines on quality provision in cross-border higher education exist precisely to protect students from low-quality or fraudulent provision.</div>
 </div></section>
 
 <!-- VIRTUAL EXCHANGE / COIL -->
 <section id="virtualexchange"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Equity-minded internationalization</span><h2>Virtual exchange &amp; COIL, in depth</h2>
     <p class="lead">Collaborative Online International Learning (COIL) and the broader family of virtual exchange connect students in different countries through sustained, technology-enabled collaboration built into the curriculum. Pioneered at the SUNY COIL Center, it is increasingly framed as an <em>equity</em> strategy — global learning for the many who cannot travel.</p></div>
-  <div class="grid g2" style="margin-bottom:20px">
+  <div class="grid g2 lr-s4">
     <div class="card"><h3>What makes it COIL (not just a video call)</h3>
       <ul>
         <li><b>Co-taught &amp; co-designed</b> by faculty at two or more institutions in different countries</li>
@@ -687,32 +497,32 @@
     <div class="step"><div class="num"></div><div><h4>Implementation &amp; stewardship</h4><p>Assign a named owner on each side, resource the work, and communicate. Most partnerships live or die on relationships and follow-through — build in regular contact, shared expectations, and cultural sensitivity rather than signing and walking away.</p></div></div>
     <div class="step"><div class="num"></div><div><h4>Review, renewal &amp; sunset</h4><p>Evaluate against the outcomes defined at scoping: activity, quality, reciprocity, and value. Then decide deliberately — deepen, renew, or gracefully end. Retiring a partnership that no longer serves either institution is a success of governance, not a failure; it frees capacity for ones that do.</p></div></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>The MOU trap:</b> many institutions accumulate dozens of signed MOUs that never produce activity. Treat the signature as the <em>start</em> of work, not the achievement — and audit the portfolio periodically so that dormant agreements are closed rather than counted.</div>
+  <div class="callout lr-s7"><b>The MOU trap:</b> many institutions accumulate dozens of signed MOUs that never produce activity. Treat the signature as the <em>start</em> of work, not the achievement — and audit the portfolio periodically so that dormant agreements are closed rather than counted.</div>
 </div></section>
 
-<!-- FUNDING & MOBILITY PROGRAMS -->
+<!-- FUNDING &amp; MOBILITY PROGRAMS -->
 <section id="funding"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Enablers</span><h2>Funding &amp; mobility programs</h2>
     <p class="lead">Flagship public programs finance much of the world's academic mobility and exchange, often with explicit diplomatic or regional-integration goals. Descriptions below are conceptual — no invented figures.</p></div>
   <div class="grid g3">
     <div class="card"><span class="tag">United States</span><h3>Fulbright Program</h3>
       <p class="kv">The flagship U.S. international exchange program, established in 1946 under legislation sponsored by Senator J. William Fulbright and administered by the U.S. Department of State. It funds students, scholars, and teachers to study, research, and teach across many partner countries in both directions.</p>
-      <p class="kv" style="margin-top:10px"><b>Rationale:</b> mutual understanding and educational diplomacy — a classic instrument of soft power.</p></div>
+      <p class="kv lr-s8"><b>Rationale:</b> mutual understanding and educational diplomacy — a classic instrument of soft power.</p></div>
     <div class="card"><span class="tag">European Union</span><h3>Erasmus+</h3>
       <p class="kv">The EU's flagship program for education, training, youth, and sport. Building on the original Erasmus student-exchange scheme, Erasmus+ funds credit mobility, joint programs (including Erasmus Mundus joint master's), staff exchange, and cooperation partnerships across Europe and, increasingly, with partner regions worldwide.</p>
-      <p class="kv" style="margin-top:10px"><b>Rationale:</b> European integration, employability, and a shared higher-education area.</p></div>
+      <p class="kv lr-s8"><b>Rationale:</b> European integration, employability, and a shared higher-education area.</p></div>
     <div class="card"><span class="tag">National scholarships</span><h3>Government scholarship schemes</h3>
       <p class="kv">Many governments run national scholarship and mobility schemes to attract talent, build capacity, or project influence — for example the UK's Chevening and Commonwealth scholarships, Germany's DAAD support, and the Chinese Government Scholarship. Some fund inbound international students; others send home nationals abroad.</p>
-      <p class="kv" style="margin-top:10px"><b>Rationale:</b> talent attraction, development, and diplomatic ties.</p></div>
+      <p class="kv lr-s8"><b>Rationale:</b> talent attraction, development, and diplomatic ties.</p></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>Reading the map:</b> mobility funding is rarely neutral charity — it advances the funder's goals, whether educational diplomacy (Fulbright), regional integration (Erasmus+), capacity building, or talent competition. Understanding the <em>why</em> behind a program helps leaders align institutional participation with genuine mutual benefit.</div>
+  <div class="callout lr-s7"><b>Reading the map:</b> mobility funding is rarely neutral charity — it advances the funder's goals, whether educational diplomacy (Fulbright), regional integration (Erasmus+), capacity building, or talent competition. Understanding the <em>why</em> behind a program helps leaders align institutional participation with genuine mutual benefit.</div>
 </div></section>
 
 <!-- ETHICS: DECOLONIZING INTERNATIONALIZATION -->
 <section id="decolonizing"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Ethics</span><h2>Decolonizing internationalization</h2>
     <p class="lead">A critical strand of scholarship argues that internationalization, left unexamined, can reproduce colonial patterns — flows of prestige, knowledge, and money that run from a dominant "center" to a dependent "periphery" (Altbach). Decolonizing it means confronting those power asymmetries directly.</p></div>
-  <div class="grid g3" style="margin-bottom:18px">
+  <div class="grid g3 lr-s10">
     <div class="card"><h3>Naming the power asymmetries</h3><ul>
       <li>Prestige, rankings, and citation systems privilege the Global North and English</li>
       <li>Curricula and "world-class" models often default to Western canons and epistemologies</li>
@@ -735,7 +545,7 @@
   <div class="callout"><b>From critique to practice:</b> decolonizing internationalization is not a rejection of global engagement — it is a demand that engagement be reciprocal, humble, and just. Concretely: audit whose knowledge counts, whose voices set the agenda, who bears the costs, and who captures the benefits — then redesign partnerships so the answer is genuinely shared. This is the ethical core of "internationalization of higher education for society" (de Wit &amp; Jones).</div>
 </div></section>
 
-<!-- EQUITY & ETHICS -->
+<!-- EQUITY &amp; ETHICS -->
 <section id="equity"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Equity &amp; ethics</span><h2>Whose knowledge, whose access, whose benefit?</h2>
     <p class="lead">A growing body of scholarship asks internationalization to confront its inequities and colonial legacies — and to build partnerships that are genuinely reciprocal.</p></div>
@@ -759,7 +569,7 @@
       <li>Environmental cost of mobility (carbon) enters the calculus</li>
     </ul></div>
   </div>
-  <div class="callout" style="margin-top:18px"><b>The reframing:</b> leading scholars call for a shift from internationalization measured by activity counts and revenue toward <em>"internationalization of higher education for society"</em> — intentional, inclusive, ethical, and oriented to public good rather than prestige and profit.</div>
+  <div class="callout lr-s7"><b>The reframing:</b> leading scholars call for a shift from internationalization measured by activity counts and revenue toward <em>"internationalization of higher education for society"</em> — intentional, inclusive, ethical, and oriented to public good rather than prestige and profit.</div>
 </div></section>
 
 <!-- ETHICS SELF-CHECK -->
@@ -779,7 +589,7 @@
   <div class="score">
     <div class="kv">Estimated comprehensiveness</div>
     <div class="meter"><div class="fill" id="ciFill"></div></div>
-    <div class="verdict" id="ciVerdict" style="color:var(--muted)">Select the elements your institution has in place</div>
+    <div class="verdict lr-s11" id="ciVerdict">Select the elements your institution has in place</div>
   </div>
 </div></section>
 
@@ -787,22 +597,22 @@
 <section id="glossary"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Reference</span><h2>Core vocabulary &amp; scholars</h2></div>
   <div class="grid g2">
-    <div class="card"><ul style="list-style:none;padding:0;margin:0">
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Internationalization</b> — integrating an international/intercultural/global dimension into teaching, research &amp; service (Knight).</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Internationalization at home</b> — global learning for all students on the home campus (Beelen &amp; Jones).</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Comprehensive internationalization</b> — institution-wide infusion of global perspective (Hudzik / ACE).</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Credit vs. degree mobility</b> — a term abroad for home credit vs. a full credential abroad.</li>
-      <li style="padding:9px 0"><b style="color:var(--ink)">COIL</b> — Collaborative Online International Learning; a form of virtual exchange.</li>
+    <div class="card"><ul class="lr-s12">
+      <li class="lr-s13"><b class="lr-s14">Internationalization</b> — integrating an international/intercultural/global dimension into teaching, research &amp; service (Knight).</li>
+      <li class="lr-s13"><b class="lr-s14">Internationalization at home</b> — global learning for all students on the home campus (Beelen &amp; Jones).</li>
+      <li class="lr-s13"><b class="lr-s14">Comprehensive internationalization</b> — institution-wide infusion of global perspective (Hudzik / ACE).</li>
+      <li class="lr-s13"><b class="lr-s14">Credit vs. degree mobility</b> — a term abroad for home credit vs. a full credential abroad.</li>
+      <li class="lr-s15"><b class="lr-s14">COIL</b> — Collaborative Online International Learning; a form of virtual exchange.</li>
     </ul></div>
-    <div class="card"><ul style="list-style:none;padding:0;margin:0">
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Bologna Process / EHEA</b> — European harmonization of degree cycles &amp; ECTS credits.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">SEVIS</b> — U.S. system tracking F/J visa holders; managed by the DSO.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Credential evaluation</b> — assessing foreign qualifications for equivalency.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Branch campus</b> — a physical presence abroad awarding the home credential.</li>
-      <li style="padding:9px 0"><b style="color:var(--ink)">Soft power</b> — influence gained through educational &amp; cultural attraction.</li>
+    <div class="card"><ul class="lr-s12">
+      <li class="lr-s13"><b class="lr-s14">Bologna Process / EHEA</b> — European harmonization of degree cycles &amp; ECTS credits.</li>
+      <li class="lr-s13"><b class="lr-s14">SEVIS</b> — U.S. system tracking F/J visa holders; managed by the DSO.</li>
+      <li class="lr-s13"><b class="lr-s14">Credential evaluation</b> — assessing foreign qualifications for equivalency.</li>
+      <li class="lr-s13"><b class="lr-s14">Branch campus</b> — a physical presence abroad awarding the home credential.</li>
+      <li class="lr-s15"><b class="lr-s14">Soft power</b> — influence gained through educational &amp; cultural attraction.</li>
     </ul></div>
   </div>
-  <div class="card" style="margin-top:18px"><h3>Foundational scholars, organizations &amp; further reading</h3>
+  <div class="card lr-s7"><h3>Foundational scholars, organizations &amp; further reading</h3>
     <div class="scholars">
       <span class="chip">Jane Knight — <em>internationalization definition &amp; rationales</em></span>
       <span class="chip">Philip Altbach — <em>global higher education, centers &amp; peripheries</em></span>
@@ -820,113 +630,22 @@
       <span class="chip">UNESCO &amp; OECD — <em>cross-border QA guidelines, global conventions &amp; data</em></span>
       <span class="chip">Fulbright &amp; Erasmus+ — <em>flagship mobility &amp; exchange programs</em></span>
     </div>
-    <p class="kv" style="margin-top:14px"><b>Anchor readings (concepts):</b> Knight — <em>internationalization definition &amp; rationale framework</em>; Altbach — <em>centers &amp; peripheries in global HE</em>; de Wit — <em>rethinking / for-society internationalization</em>; Marginson — <em>rankings &amp; global positional competition</em>; Hudzik — <em>Comprehensive Internationalization</em>; Leask — <em>Internationalizing the Curriculum</em>; plus NAFSA and Bologna/EHEA policy concepts.</p></div>
+    <p class="kv lr-s6"><b>Anchor readings (concepts):</b> Knight — <em>internationalization definition &amp; rationale framework</em>; Altbach — <em>centers &amp; peripheries in global HE</em>; de Wit — <em>rethinking / for-society internationalization</em>; Marginson — <em>rankings &amp; global positional competition</em>; Hudzik — <em>Comprehensive Internationalization</em>; Leask — <em>Internationalizing the Curriculum</em>; plus NAFSA and Bologna/EHEA policy concepts.</p></div>
 </div></section>
+</main>
 
 <footer><div class="wrap">
   <div class="foot-name">Freddrick Logan</div>
   <div class="foot-title">Global Higher Education &amp; Internationalization</div>
   <nav class="foot-links" aria-label="Footer">
     <a href="https://fredlogan.phd">fredlogan.phd</a> &middot;
-    <a href="../resources/">Resource hub</a> &middot;
+    <a href="https://freddricklogan.github.io/resources/">Resource hub</a> &middot;
     <a href="https://github.com/Freddricklogan">GitHub</a> &middot;
     <a href="https://www.linkedin.com/in/freddricklogan/">LinkedIn</a>
   </nav>
   <div class="copyright">&copy; 2026 Freddrick Logan &mdash; Technologist &amp; Education. All rights reserved.</div>
 </div></footer>
 
-<script>
-// ---- Strategy explorer tabs ----
-document.querySelectorAll('#levertabs .tab').forEach(t=>{
-  t.onclick=()=>{
-    document.querySelectorAll('#levertabs .tab').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('#explorer .panel').forEach(p=>p.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById(t.dataset.p).classList.add('active');
-  };
-});
-
-// ---- Comprehensive internationalization self-check ----
-const cks=document.querySelectorAll('#checklist .ck');
-function scoreCI(){
-  let s=0; cks.forEach(c=>{ if(c.classList.contains('on')) s+=parseInt(c.dataset.w,10); });
-  s=Math.min(100,s);
-  document.getElementById('ciFill').style.width=s+'%';
-  const v=document.getElementById('ciVerdict');
-  if(s===0){v.textContent='Select the elements your institution has in place';v.style.color='var(--muted)';}
-  else if(s<35){v.textContent=s+'% — Fragmented: activities exist but lack an institution-wide strategy';v.style.color='var(--bad)';}
-  else if(s<70){v.textContent=s+'% — Developing: strong pillars, but not yet comprehensive';v.style.color='var(--warn)';}
-  else{v.textContent=s+'% — Comprehensive: internationalization is woven across the institution';v.style.color='var(--good)';}
-}
-cks.forEach(c=>c.onclick=()=>{c.classList.toggle('on');scoreCI();});
-scoreCI();
-
-// ---- Rankings explorer tabs ----
-document.querySelectorAll('#ranktabs .tab').forEach(t=>{
-  t.onclick=()=>{
-    document.querySelectorAll('#ranktabs .tab').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('#rankings .panel').forEach(p=>p.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById(t.dataset.p).classList.add('active');
-  };
-});
-
-// ---- TNE model selector ----
-const tneInfo={
-  branch:{t:'International branch campus',d:'The awarding institution operates a physical campus in the host country and grants its own credential there. Highest control and brand consistency — and the highest capital cost, financial exposure, and dual-jurisdiction quality-assurance burden. Best when there is durable demand and a stable host environment.'},
-  franchise:{t:'Franchising / validation',d:'A local partner delivers the awarding institution’s programme under licence (franchising) or wins approval for its own programme to carry the awarding institution’s credential (validation). Low capital and fast reach, but the awarding institution stakes its brand on a partner it must monitor closely to prevent quality drift.'},
-  joint:{t:'Joint &amp; double degrees',d:'Institutions in different countries co-design a programme that awards a single shared credential (joint) or two separate credentials (double / dual). Deep, reciprocal collaboration with mutual recognition and shared expertise — offset by complex governance, credit-recognition, and sustainability challenges if a founding champion departs.'},
-  online:{t:'Distance / online provision',d:'The credential is delivered wholly or largely online across borders, sometimes supported by local study centres. Highly scalable and flexible for working and non-mobile learners, but success depends on digital-access equity, engagement and completion, credential recognition abroad, and designing in cultural connection.'}
-};
-const tneOpts=document.querySelectorAll('#tneOpts .opt');
-const tneResult=document.getElementById('tneResult');
-function renderTne(m){
-  const i=tneInfo[m];
-  tneResult.innerHTML='<div class="big">'+i.t+'</div><p class="kv">'+i.d+'</p>';
-}
-tneOpts.forEach(o=>o.onclick=()=>{
-  tneOpts.forEach(x=>x.classList.remove('sel'));
-  o.classList.add('sel');
-  renderTne(o.dataset.m);
-});
-renderTne('branch');
-</script>
-<script>
-(function(){
-  if(document.querySelector('.sec-head.sect-toggle')) return;
-  var firstCollapsible=null;
-  [].slice.call(document.querySelectorAll('section')).forEach(function(sec){
-    var wrap=sec.querySelector('.wrap'); if(!wrap) return;
-    var head=wrap.querySelector('.sec-head'); if(!head) return;
-    if(wrap.querySelector('.memo-head')||wrap.querySelector('.exec-summary')) return;
-    var body=document.createElement('div'); body.className='sect-body';
-    var n=head.nextSibling;
-    while(n){ var nx=n.nextSibling; body.appendChild(n); n=nx; }
-    wrap.appendChild(body);
-    head.classList.add('sect-toggle');
-    head.setAttribute('role','button'); head.setAttribute('tabindex','0'); head.setAttribute('aria-expanded','false');
-    sec.classList.add('collapsed');
-    if(!firstCollapsible) firstCollapsible=sec;
-    function set(open){ sec.classList[open?'remove':'add']('collapsed'); head.setAttribute('aria-expanded',open?'true':'false'); }
-    head.addEventListener('click',function(){ set(sec.classList.contains('collapsed')); });
-    head.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); set(sec.classList.contains('collapsed')); } });
-  });
-  function openHash(){ var id=decodeURIComponent((location.hash||'').slice(1)); if(!id) return; var el=document.getElementById(id); if(!el) return; var s=el.closest?el.closest('section'):null; if(s&&s.classList.contains('collapsed')){ s.classList.remove('collapsed'); var h=s.querySelector('.sec-head.sect-toggle'); if(h)h.setAttribute('aria-expanded','true'); } setTimeout(function(){ try{el.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){el.scrollIntoView();} },40); }
-  window.addEventListener('hashchange',openHash);
-  if(firstCollapsible){
-    var bar=document.createElement('div'); bar.className='expand-bar';
-    var btn=document.createElement('button'); btn.type='button'; btn.textContent='Expand all sections'; btn.setAttribute('aria-expanded','false');
-    var expanded=false;
-    btn.addEventListener('click',function(){
-      expanded=!expanded;
-      document.querySelectorAll('section').forEach(function(s){ var h=s.querySelector('.sec-head.sect-toggle'); if(!h) return; s.classList[expanded?'remove':'add']('collapsed'); h.setAttribute('aria-expanded',expanded?'true':'false'); });
-      btn.textContent=expanded?'Collapse all sections':'Expand all sections'; btn.setAttribute('aria-expanded',expanded?'true':'false');
-    });
-    bar.appendChild(btn);
-    firstCollapsible.parentNode.insertBefore(bar, firstCollapsible);
-  }
-  openHash();
-})();
-</script>
+<script type="module" src="src/main.js"></script>
 </body>
 </html>

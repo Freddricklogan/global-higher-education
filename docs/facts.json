@@ -1,0 +1,68 @@
+{
+  "title": "Global Higher Education & Internationalization",
+  "subtitle": "a graduate-level guide to internationalization strategy, from Knight's definition to decolonizing the partnership, with a strategy explorer, a rankings explorer, a TNE selector and a self-check",
+  "problem": "Senior international officers, provosts and the graduate students who will replace them inherit an internationalization strategy that is really a list: a study-abroad office, a few memoranda, a recruitment agent contract, a ranking to chase. Each lever is treated as the strategy; the rationales, the systems on the other side of the partnership and the power asymmetries in the flows are rarely examined together.",
+  "solution": "A seventeen-section resource that starts from Knight's definition and the four rationales, sets out the levers of comprehensive internationalization in a strategy explorer, follows student mobility and services across the lifecycle, reads comparative systems and the Bologna Process in depth, opens up what three global rankings actually reward, weighs transnational-education models in a selector, presents virtual exchange as an equity strategy, walks the partnership lifecycle and funding programmes, and confronts decolonization and equity — closing with a comprehensive-internationalization self-check after Hudzik.",
+  "pedagogy": "strategy as a set of choices with trade-offs: every explorer pairs a lever, ranking or TNE model with its benefits and the challenges leaders must manage; general patterns are labelled as patterns, never as statistics; the self-check makes the reader assess their own institution before the page suggests what comprehensive looks like.",
+  "section_titles": [
+    "what internationalization means",
+    "rationales and risks",
+    "strategy explorer",
+    "student mobility",
+    "international student services",
+    "global systems and quality",
+    "comparative systems",
+    "Bologna in depth",
+    "rankings",
+    "transnational education",
+    "virtual exchange and COIL",
+    "partnerships lifecycle",
+    "funding and mobility programmes",
+    "decolonizing internationalization",
+    "equity and ethics",
+    "self-check",
+    "glossary"
+  ],
+  "widgets": [
+    {
+      "name": "Strategy explorer",
+      "what": "Six lever tabs — student mobility, branch campuses, partnerships and joint degrees, internationalized curriculum, research collaboration, virtual exchange — each with definition, benefits and challenges"
+    },
+    {
+      "name": "Rankings explorer",
+      "what": "ARWU, Times Higher Education and QS: what each formula conceptually rewards and where it is critiqued"
+    },
+    {
+      "name": "TNE model selector",
+      "what": "Branch campus, franchising and validation, joint and double degrees, distance provision — with the trade-offs of each"
+    },
+    {
+      "name": "Comprehensive internationalization self-check",
+      "what": "Weighted checklist after Hudzik; fills a bar and gives a Fragmented / Developing / Comprehensive verdict"
+    }
+  ],
+  "quiz_topics": [
+    "Knight's definition against globalization",
+    "durations and directions of mobility",
+    "what Bologna built",
+    "what makes COIL more than a video call",
+    "the decolonizing critique"
+  ],
+  "tour": [
+    "the first section opens and the count rises.",
+    "Knight's definition, mobility, Bologna, COIL and decolonization"
+  ],
+  "repo": "global-higher-education",
+  "tests": 7,
+  "cov_all": 79.84,
+  "cov_kit": 78.75,
+  "vars": 26,
+  "inline_styles": 58,
+  "style_classes": 15,
+  "buttons": 9,
+  "tables": 3,
+  "main_note": "wrapped the content in a `<main>` landmark",
+  "sections": 17,
+  "words": 4660,
+  "reading_min": 21
+}
