@@ -3,6 +3,7 @@ export const config = {
   title: 'Global Higher Education & Internationalization',
   tagline: 'A graduate-level guide to internationalization in higher education: Knight’s definition and rationales, the levers of comprehensive internationalization, student mobility and services, comparative systems and Bologna, rankings, transnational education, virtual exchange, partnerships, funding, decolonization and equity, with a strategy explorer, a rankings explorer, a TNE selector and a self-check.',
   repo: 'https://github.com/Freddricklogan/global-higher-education',
+  theme: 'plum',
   pagesUrl: 'https://freddricklogan.github.io/global-higher-education/',
   quizTitle: 'Five questions on global higher education',
   quiz: [
